@@ -1,0 +1,82 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Survey Form</title>
+	<link rel="stylesheet" href= "style.css">
+</head>
+
+
+<body>
+	
+
+
+<div class = "container">
+  <h1 id = "title"> A Simple Survey form 
+  </h1>
+  <p id = "description"> Thank you for taking time to complete the survey</p>
+  <form id = "survey-form" action="survey_input.php" method = "post">
+    <div class= "form-group">
+      <label id = "name-label" for = "name">Name</label>
+      <input type= "text" name= "name"
+      id ="name" class= "form-control" placeholder = "Enter your name" required/>
+    </div>
+    <div class = "form-group"> 
+      <label id = "email-label" for = "email"> Email </label>
+      <input type = "email" id = "email" name= "email" class= "form-control" placeholder = "Enter your email" required/>
+    </div>
+    <div class = "form-group"> 
+      <label id = "number-label" for = "age"> Age </label>
+      <input type = "number" min = "18" max= " 50" class= "form-control" id = "number" name = "age" placeholder = "Age" />
+   
+    </div>
+    <div class = "form-group">
+      <label id = "role-label" for = "current_role ">Which option best describes your current role </label>
+      <select class = "form-control" id = "dropdown" type = "drop-down" name= "current_role">
+        <option disabled selected value> Select a Value</option>
+        <option value = "student">Student</option>
+        <option value = "full-time">Full-time </option>
+        <option value = "part-time">Part-time </option>
+        <option value= "other">Other</option>
+      </select>
+      
+    </div>
+    <div class ="form-group">
+      <label for = " " id = "question">Would you recommend this service to a friend ?</label>
+      
+      <label for = "definite" id= "definite-value "><input type = "radio" id = "definite " value = "definitely" name = "user-recomend">Definitely </label>
+     
+      <label for = "may-be" id= "maybe-label "> <input type = "radio" id = "may-be" value = "maybe" name = "user-recomend">May Be </label>
+      
+      <label for = "radio-no" id= "no-label"><input type = "radio" id = "radio-no" value = "no" name = "user-recomend">No </label>
+    </div>
+    <div class = "form-group">
+      <label>What do you like the most?         </label>
+       <label
+        ><input
+          name="prefer"
+          value="appearance"
+          type="checkbox"
+          class="input-checkbox"
+        />Appearance</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="content"
+          type="checkbox"
+          class="input-checkbox"
+        />Content</label
+      >
+      
+    </div>
+    <div class = "form-group">
+      <label>Additional Comments </label>
+      <textarea id = "comments" name = "comments " class= "input-textarea" placeholder = "Enter your comments here.." > </textarea>
+    </div>
+    <button type = "submit" id = "submit"> Submit</button>
+  </form>
+</div>
+
+	
+</body>
+</html>
